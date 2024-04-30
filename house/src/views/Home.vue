@@ -16,7 +16,8 @@
 
       <!-- 右边 -->
       <el-aside width="200px">
-
+        <!-- 侧边栏 -->
+        <MySideMenu style="width: auto;"/>
       </el-aside>
     </el-container>
   </div>
@@ -24,6 +25,7 @@
 
 <script setup>
 import MyTopMenu from "@/components/MyTopMenu/index.vue";
+import MySideMenu from "@/components/MySideMenu/index.vue";
 </script>
 
 <style>
