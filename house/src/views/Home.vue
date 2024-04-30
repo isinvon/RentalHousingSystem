@@ -9,7 +9,11 @@
           <MyTopMenu />
         </el-header>
         <!-- 中间 -->
-        <el-main>Main</el-main>
+        <el-main>
+
+
+          <MyPagnation style="display: flex"/>
+        </el-main>
         <!-- 页脚 -->
         <el-footer>Footer</el-footer>
       </el-container>
@@ -26,6 +30,7 @@
 <script setup>
 import MyTopMenu from "@/components/MyTopMenu/index.vue";
 import MySideMenu from "@/components/MySideMenu/index.vue";
+import MyPagnation from "@/components/MyPagnation.vue";
 </script>
 
 <style>
