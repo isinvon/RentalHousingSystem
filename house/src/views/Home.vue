@@ -5,7 +5,8 @@
       <el-container style="width: auto;">
         <!-- 页头 -->
         <el-header>
-
+          <!-- 顶栏 -->
+          <MyTopMenu />
         </el-header>
         <!-- 中间 -->
         <el-main>Main</el-main>
@@ -22,7 +23,7 @@
 </template>
 
 <script setup>
-
+import MyTopMenu from "@/components/MyTopMenu/index.vue";
 </script>
 
 <style>
