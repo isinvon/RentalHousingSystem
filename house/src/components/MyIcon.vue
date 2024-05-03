@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { Icon } from "@iconify/vue";
 import { isUrl } from "@/utils/window";
 
@@ -22,7 +22,7 @@ const props = defineProps({
 <template>
   <div class="flex items-center">
     <img
-      v-if="isUrl(<string>props.icon)"
+      v-if="isUrl(props.icon)"
       :width="`${size}px`"
       :height="`${size}px`"
       :src="icon"
