@@ -34,3 +34,12 @@ const handleSelect = (key, keyPath) => {
   console.log(key, keyPath)
 }
 </script>
+
+<style lang="scss" scoped>
+.el-menu {
+  // 解释: 移除边框
+  border-right: none;
+  // 内部元素居中 
+  justify-content: center;
+}
+</style>
