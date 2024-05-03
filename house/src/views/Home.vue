@@ -10,7 +10,7 @@
         </el-header>
         <!-- 中间 -->
         <el-main>
-          <MyPagination style="display: flex"/>
+          <MyPagination style="display: flex"  />
         </el-main>
         <!-- 页脚 -->
         <el-footer>Footer</el-footer>
