@@ -1,3 +1,4 @@
+<!-- 联级选择器 -->
 <template>
   <!-- <div class="m-4">
       <p>Child options expand when clicked (default)</p>
@@ -7,7 +8,7 @@
     <!-- 搜索框标题 -->
     <p>{{ title }}</p>
     <!-- 联级选择器 -->
-    <el-cascader v-model="value" :options="props.options" :props="props" @change="handleChange" />
+    <el-cascader v-model="value" :options="props.options" :props="props" @change="handleChange" placeholder="请点击选择" />
   </div>
 </template>
 
