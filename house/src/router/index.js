@@ -12,17 +12,18 @@ const routes = [
     // 所有房源
     path: "/house",
     name: "house",
+    component: () => import('@/views/House.vue'),
     // 重定向
-    redirect: "/house/houseList",
+    // redirect: "/house/houseList",
     // 子路由
     children: [
       {
-        path: "houseList",
+        path: "/house/houseList",
         name: "houseList",
         component: () => import("@/components/MyHouse/MyHouseList.vue"),
       },
       {
-        path: "houseDetail",
+        path: "/house/houseDetail/:id",
         name: "houseDetail",
         component: () => import("@/components/MyHouse/MyHouseDetail.vue"),
       },
@@ -36,12 +37,12 @@ const routes = [
     redirect: "/news/newsList",
     children: [
       {
-        path: "newsList",
+        path: "/news/newsList",
         name: "newsList",
         component: () => import("@/components/News/NewsList.vue"),
       },
       {
-        path: "newsDetail",
+        path: "/news/newsDetail/:id",
         name: "newsDetail",
         component: () => import("@/components/News/NewsDetail.vue"),
       },
