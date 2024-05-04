@@ -3,7 +3,6 @@
     <el-container class="el-container">
       <!-- 左边 -->
       <el-container style="width: auto">
-        
         <!-- 页头 -->
         <!-- <el-header>
         </el-header> -->
@@ -19,7 +18,7 @@
           <MyPagination style="display: flex" />
         </el-main>
         <!-- 页脚 -->
-        <el-footer>Footer</el-footer>
+        <!-- <el-footer>Footer</el-footer> -->
       </el-container>
 
       <!--右边 -->
