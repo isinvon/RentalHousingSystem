@@ -43,4 +43,13 @@ const handleSelect = (key, keyPath) => {
   // 内部元素居中 
   justify-content: center;
 }
+
+// 移除a标签的默认样式
+a{
+  text-decoration: none;
+}
+// 移除router-link激活事后的样式(去除下划线)
+.router-link-active {
+  text-decoration: none;
+}
 </style>
