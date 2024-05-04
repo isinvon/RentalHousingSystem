@@ -10,6 +10,8 @@
         </el-header>
         <!-- 中间 -->
         <el-main>
+          <!-- 主体(房源卡片列表) -->
+          <MyMainLayout />
           <MyPagination style="display: flex"  />
         </el-main>
         <!-- 页脚 -->
@@ -29,6 +31,7 @@
 import MyTopMenu from "@/components/MyTopMenu/index.vue";
 import MySideMenu from "@/components/MySideMenu/index.vue";
 import MyPagination from "@/components/MyPagination.vue";
+import MyMainLayout from "@/components/MyMainLayout/index.vue";
 </script>
 
 <style>
