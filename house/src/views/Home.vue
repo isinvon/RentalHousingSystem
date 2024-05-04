@@ -3,10 +3,11 @@
     <el-container class="el-container">
       <!-- 左边 -->
       <el-container style="width: auto">
-        <!-- 页头 -->
-        <el-header>
         
-        </el-header>
+        <!-- 页头 -->
+        <!-- <el-header>
+        </el-header> -->
+
         <!-- 中间 -->
         <el-main>
           <!-- 轮播图 -->
