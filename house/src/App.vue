@@ -3,11 +3,17 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav> -->
-
-  
-  <router-view/>
+  <!-- 顶栏菜单 -->
+  <navbar />
+  <!-- 页面内容 -->
+  <!-- 动态的子视图 -->
+  <keep-alive>
+    <router-view></router-view>
+  </keep-alive>
 </template>
-
+<script setup>
+import navbar from "@/views/pc/navbar/index.vue";
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
