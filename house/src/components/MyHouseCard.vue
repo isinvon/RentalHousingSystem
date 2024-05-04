@@ -1,5 +1,5 @@
 <template>
-    <el-card style="max-width: 480px" shadow="hover">
+    <el-card :house="house" style="max-width: 480px" shadow="hover">
         <!-- 卡片内顶部 -->
         <template #header>
             <img id="my-house-card-img"
