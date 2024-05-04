@@ -12,10 +12,14 @@
   <keep-alive>
     <router-view></router-view>
   </keep-alive>
+  <!-- 页脚 -->
+  <Footer />
+  
 </template>
 <script setup>
 import navbar from "@/views/pc/navbar/index.vue";
 import BackTopButton from './components/BackTopButton.vue'
+import Footer from './views/pc/footer/index.vue'
 </script>
 <style lang="scss">
 #app {
