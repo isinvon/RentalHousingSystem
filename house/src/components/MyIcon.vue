@@ -9,7 +9,7 @@ defineOptions({
 const props = defineProps({
   icon: {
     type: [String],
-    default: "",
+    default: "twemoji:hot-face",
   },
   
   size: {
