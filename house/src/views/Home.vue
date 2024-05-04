@@ -28,10 +28,10 @@
 </template>
 
 <script setup>
-import MyTopMenu from "@/components/MyTopMenu/index.vue";
-import MySideMenu from "@/components/MySideMenu/index.vue";
+import MyTopMenu from "@/views/pc/navbar/index.vue";
+import MySideMenu from "@/views/pc/side-menu/index.vue";
 import MyPagination from "@/components/MyPagination.vue";
-import MyMainLayout from "@/components/MyMainLayout/index.vue";
+import MyMainLayout from "@/views/pc/main/index.vue";
 </script>
 
 <style>
