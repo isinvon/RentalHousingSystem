@@ -15,11 +15,12 @@
     <!-- </el-sub-menu> -->
     <!-- 禁用的菜单 -->
     <!-- <el-menu-item index="3" disabled></el-menu-item> -->
-    <el-menu-item index="1">首页</el-menu-item>
-    <el-menu-item index="2">所有房源</el-menu-item>
-    <el-menu-item index="3">招租文章</el-menu-item>
-    <el-menu-item index="4">求租文章</el-menu-item>
-    <el-menu-item index="4">新闻资讯</el-menu-item>
+    <el-menu-item index="1"><router-link to="/">首页</router-link></el-menu-item>
+    <el-menu-item index="2"><router-link to="/houseList">所有房源</router-link></el-menu-item>
+    <el-menu-item index="3"><router-link to="/rentAd">招租文章</router-link></el-menu-item>
+    <el-menu-item index="4"><router-link to="/rentRequest">求租文章</router-link></el-menu-item>
+    <el-menu-item index="5"><router-link to="/news">新闻资讯</router-link></el-menu-item>
+    <el-menu-item index="6"><router-link to="/about">关于我们</router-link></el-menu-item>
   </el-menu>
   <div class="h-6" />
 
