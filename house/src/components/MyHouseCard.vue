@@ -2,9 +2,7 @@
     <el-card :house="house" style="max-width: 480px" shadow="hover">
         <!-- 卡片内顶部 -->
         <template #header>
-            <img id="my-house-card-img"
-                src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-                style="width: 100%" />
+            <img id="my-house-card-img" :src="house.img" style="width: 100%;height: 200px;" />
         </template>
 
         <!-- 卡片内中部 -->
