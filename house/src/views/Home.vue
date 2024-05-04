@@ -10,6 +10,8 @@
         </el-header>
         <!-- 中间 -->
         <el-main>
+          <!-- 搜索栏 -->
+          <MyHouseInfoSearchBar/>
           <!-- 主体(房源卡片列表) -->
           <MyMainLayout />
           <MyPagination style="display: flex"  />
@@ -32,6 +34,7 @@ import MyTopMenu from "@/views/pc/navbar/index.vue";
 import MySideMenu from "@/views/pc/side-menu/index.vue";
 import MyPagination from "@/components/MyPagination.vue";
 import MyMainLayout from "@/views/pc/main/index.vue";
+import MyHouseInfoSearchBar from "@/components/MyHouseInfoSearchBar/index.vue";
 </script>
 
 <style>
