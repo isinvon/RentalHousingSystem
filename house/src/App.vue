@@ -4,7 +4,7 @@
     <router-link to="/about">About</router-link>
   </nav> -->
   <!-- 顶栏菜单 -->
-  <navbar />
+  <Navbar/>
   <!-- 返回顶部按钮 -->
   <BackTopButton />
   <!-- 页面内容 -->
@@ -17,7 +17,7 @@
   
 </template>
 <script setup>
-import navbar from "@/views/pc/navbar/index.vue";
+import Navbar from "@/views/pc/navbar/index.vue";
 import BackTopButton from './components/BackTopButton.vue'
 import Footer from './views/pc/footer/index.vue'
 </script>

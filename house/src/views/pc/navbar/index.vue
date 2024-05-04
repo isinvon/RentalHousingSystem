@@ -27,6 +27,9 @@
 </template>
 
 <script lang="js" setup>
+
+defineOptions({name: "Navbar"})
+
 import { ref } from 'vue'
 
 const activeIndex = ref('1')
