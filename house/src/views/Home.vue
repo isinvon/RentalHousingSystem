@@ -5,8 +5,7 @@
       <el-container style="width: auto">
         <!-- 页头 -->
         <el-header>
-          <!-- 顶栏 -->
-          <MyTopMenu />
+        
         </el-header>
         <!-- 中间 -->
         <el-main>
@@ -32,7 +31,6 @@
 </template>
 
 <script setup>
-import MyTopMenu from "@/views/pc/navbar/index.vue";
 import MySideMenu from "@/views/pc/side-menu/index.vue";
 import MyPagination from "@/components/MyPagination.vue";
 import MyMainLayout from "@/views/pc/main/index.vue";
