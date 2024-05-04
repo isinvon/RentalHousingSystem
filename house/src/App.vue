@@ -5,6 +5,8 @@
   </nav> -->
   <!-- 顶栏菜单 -->
   <navbar />
+  <!-- 返回顶部按钮 -->
+  <BackTopButton />
   <!-- 页面内容 -->
   <!-- 动态的子视图 -->
   <keep-alive>
@@ -13,6 +15,7 @@
 </template>
 <script setup>
 import navbar from "@/views/pc/navbar/index.vue";
+import BackTopButton from './components/BackTopButton.vue'
 </script>
 <style lang="scss">
 #app {
