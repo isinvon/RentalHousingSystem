@@ -12,7 +12,7 @@ const routes = [
     // 所有房源
     path: "/house",
     name: "house",
-    component: () => import('@/views/House.vue'),
+    component: () => import("@/views/House.vue"),
     // 重定向
     // redirect: "/house/houseList",
     // 子路由
@@ -20,12 +20,12 @@ const routes = [
       {
         path: "/house/houseList",
         name: "houseList",
-        component: () => import("@/components/MyHouse/MyHouseList.vue"),
+        component: () => import("@/components/house/houseList.vue"),
       },
       {
         path: "/house/houseDetail/:id",
         name: "houseDetail",
-        component: () => import("@/components/MyHouse/MyHouseDetail.vue"),
+        component: () => import("@/components/house/houseDetail.vue"),
       },
     ],
   },
@@ -39,12 +39,46 @@ const routes = [
       {
         path: "/news/newsList",
         name: "newsList",
-        component: () => import("@/components/News/NewsList.vue"),
+        component: () => import("@/components/news/newsList.vue"),
       },
       {
         path: "/news/newsDetail/:id",
         name: "newsDetail",
-        component: () => import("@/components/News/NewsDetail.vue"),
+        component: () => import("@/components/news/newsDetail.vue"),
+      },
+    ],
+  },
+  // 招租文章
+  {
+    path: "/rentAd",
+    name: "rentAd",
+    children: [
+      {
+        path: "/rentAd",
+        name: "rentAd",
+        component: () => import("@/components/rentAd/rentAdDetail"),
+      },
+      {
+        path: "/rentAd/rentAdDetail/:id",
+        name: "rentAdDetail",
+        component: () => import("@/components/rentAd/rentAdDetail"),
+      },
+    ],
+  },
+    //求租文章
+  {
+    path: "/rentRequest",
+    name: "rentRequest",
+    children: [
+      {
+        path: "/rentRequest",
+        name: "rentRequest",
+        component: () => import("@/components/rentRequest/rentRequestDetail"),
+      },
+      {
+        path: "/rentRequest/rentRequestDetail/:id",
+        name: "rentRequestDetail",
+        component: () => import("@/components/rentRequest/rentRequestDetail"),
       },
     ],
   },
