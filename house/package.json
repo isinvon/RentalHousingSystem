@@ -8,6 +8,7 @@
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/undefined/**/*.json\""
   },
   "dependencies": {
+    "@iconify/vue": "^4.1.2",
     "core-js": "^3.37.0",
     "cropperjs": "2.0.0-beta.5",
     "date-fns": "^3.6.0",
