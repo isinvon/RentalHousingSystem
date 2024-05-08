@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/views/Home.vue";
+import Home from "@/views/home.vue";
 
 const routes = [
   {
@@ -12,7 +12,7 @@ const routes = [
     // 所有房源
     path: "/house",
     name: "house",
-    component: () => import("@/views/House.vue"),
+    component: () => import("@/views/house.vue"),
     // 重定向
     // redirect: "/house/houseList",
     // 子路由
@@ -52,12 +52,9 @@ const routes = [
   {
     path: "/rentAd",
     name: "rentAd",
+    component: () => import("@/components/rentAd/rentAdDetail"),
+    // 招租文章-详情
     children: [
-      {
-        path: "/rentAd",
-        name: "rentAd",
-        component: () => import("@/components/rentAd/rentAdDetail"),
-      },
       {
         path: "/rentAd/rentAdDetail/:id",
         name: "rentAdDetail",
@@ -69,12 +66,9 @@ const routes = [
   {
     path: "/rentRequest",
     name: "rentRequest",
+    component: () => import("@/components/rentRequest/rentRequestDetail"),
+    // 求租文章-详情
     children: [
-      {
-        path: "/rentRequest",
-        name: "rentRequest",
-        component: () => import("@/components/rentRequest/rentRequestDetail"),
-      },
       {
         path: "/rentRequest/rentRequestDetail/:id",
         name: "rentRequestDetail",
@@ -86,7 +80,7 @@ const routes = [
     // 登录
     path: "/login",
     name: "login",
-    component: () => import("@/views/login/index.vue"),
+    component: () => import("@/views/login"),
   },
   {
     // 关于我们
@@ -96,7 +90,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "about" */ "../views/about.vue"),
   },
 ];
 
