@@ -4,14 +4,14 @@
     <router-link to="/about">About</router-link>
   </nav> -->
   <!-- 顶栏菜单 -->
-  <Navbar/>
+    <Navbar/>
   <!-- 返回顶部按钮 -->
   <BackTopButton />
   <!-- 页面内容 -->
   <!-- 动态的子视图 -->
-  <keep-alive>
+  <KeepAlive>
     <router-view></router-view>
-  </keep-alive>
+  </KeepAlive>
   <!-- 页脚 -->
   <Footer />
   
@@ -20,6 +20,7 @@
 import Navbar from "@/views/pc/navbar/index.vue";
 import BackTopButton from './components/BackTopButton.vue'
 import Footer from './views/pc/footer/index.vue'
+import { KeepAlive } from "vue";
 </script>
 <style lang="scss">
 #app {
