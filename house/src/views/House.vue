@@ -1,12 +1,12 @@
 <template>
     <div>
-        <MyHouseList />
+        <HouseList />
         <MyPagination />
     </div>
 </template>
 
 <script setup>
-import MyHouseList from '@/components/MyHouse/MyHouseList.vue'
+import HouseList from '@/components/house/houseList.vue'
 import MyPagination from '@/components/MyPagination.vue'
 
 
