@@ -52,7 +52,7 @@ const routes = [
   {
     path: "/rentAd",
     name: "rentAd",
-    component: () => import("@/components/rentAd/rentAdDetail"),
+    component: () => import("@/components/rentAd"),
     // 招租文章-详情
     children: [
       {
@@ -66,7 +66,7 @@ const routes = [
   {
     path: "/rentRequest",
     name: "rentRequest",
-    component: () => import("@/components/rentRequest/rentRequestDetail"),
+    component: () => import("@/components/rentRequest"),
     // 求租文章-详情
     children: [
       {
