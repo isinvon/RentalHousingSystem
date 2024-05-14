@@ -56,7 +56,7 @@ const routes = [
     // 招租文章-详情
     children: [
       {
-        path: "/rentAd/rentAdDetail/:id",
+        path: "rentAdDetail",
         name: "rentAdDetail",
         component: () => import("@/components/rentAd/rentAdDetail"),
       },
@@ -70,7 +70,7 @@ const routes = [
     // 求租文章-详情
     children: [
       {
-        path: "/rentRequest/rentRequestDetail/:id",
+        path: "rentRequestDetail/:id",
         name: "rentRequestDetail",
         component: () => import("@/components/rentRequest/rentRequestDetail"),
       },

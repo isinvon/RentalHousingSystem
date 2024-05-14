@@ -93,7 +93,7 @@ const props = defineProps({
   // 描述
   desc: {
     type: String,
-    default: "该住宅区位于城市的心脏地带，紧邻市中心公园，为居民提供了便利的都市生活体验。它坐落在一条宁静的街道上，远离了主干道的喧嚣，确保了居住的安宁。"
+    default: "该住宅区位于城市的心脏地带，紧邻市中心公园，为居民提供了便利的都市生活体验。"
   },
   image: {
     type: String,
