@@ -1,0 +1,45 @@
+# 应用服务配置
+server:
+  port: 8080
+
+spring:
+  #  mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/house?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  #    redis
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    database: 0
+#    timeout: 10000
+#    password:
+#    jedis:
+#      pool:
+#        max-idle: 8
+#        max-active: 8
+#        min-idle: 0
+  #  邮件配置
+  #  邮箱授权码163邮箱为【邮箱+授权码】，126邮箱为【邮箱+密码】，qq邮箱为【邮箱+授权码】
+  mail:
+    host: smtp.qq.com
+    username:
+    password:
+
+# 阿里云短信配置
+# SMS控制台: https://dysms.console.aliyun.com
+#aliyun:
+#  sms:
+#    sms-access-key-id: xxx
+#    sms-access-key-secret: xxx
+#    sms-endpoint: dysmsapi.aliyuncs.com
+#    sms-template-code: SMS_154950909
+#    sms-sign-name: 阿里云短信测试
+
+#开启日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
