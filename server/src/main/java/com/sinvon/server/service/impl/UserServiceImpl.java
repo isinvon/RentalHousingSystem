@@ -15,17 +15,6 @@ import java.util.List;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
-
-
-
-
-    @Override
-    public User selectAll() {
-        // 查询所有用户信息
-        List<User> list = baseMapper.selectList(null);
-        return (User) list;
-    }
-
     @Override
     public User login(User user) {
         return null;

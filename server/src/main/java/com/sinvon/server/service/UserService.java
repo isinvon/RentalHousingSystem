@@ -9,11 +9,6 @@ import com.sinvon.server.entity.User;
 
 
 public interface UserService extends IService<User> {
-    /**
-     * 查询所有用户信息
-     */
-    public User selectAll();
-
 
     /**
      * 登录
