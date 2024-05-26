@@ -48,3 +48,6 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+# log4j日志配置
+logging:
+  config: classpath:logback-spring.xml
