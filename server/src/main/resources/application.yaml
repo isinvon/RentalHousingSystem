@@ -9,18 +9,21 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/house?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
-  #    redis
-#  redis:
-#    host: 127.0.0.1
-#    port: 6379
-#    database: 0
-#    timeout: 10000
-#    password:
-#    jedis:
-#      pool:
-#        max-idle: 8
-#        max-active: 8
-#        min-idle: 0
+  #  开发工具热启动配置
+  devtools:
+    livereload:
+      enabled: true
+  #  redis:
+  #    host: 127.0.0.1
+  #    port: 6379
+  #    database: 0
+  #    timeout: 10000
+  #    password:
+  #    jedis:
+  #      pool:
+  #        max-idle: 8
+  #        max-active: 8
+  #        min-idle: 0
   #  邮件配置
   #  邮箱授权码163邮箱为【邮箱+授权码】，126邮箱为【邮箱+密码】，qq邮箱为【邮箱+授权码】
   mail:
