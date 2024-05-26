@@ -52,7 +52,10 @@ mybatis-plus:
   global-config:
     db-config:
       # 实体类的主键生成策略都是采用ASSIGN_ID(默认雪花算法id)
-      id-type: ASSIGN_ID
+      id-type: assign_id
+      logic-delete-value: 1 # 逻辑删除值(默认为1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为0)
+
 
 # log4j日志配置
 logging:
