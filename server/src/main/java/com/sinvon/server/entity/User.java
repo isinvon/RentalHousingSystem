@@ -4,11 +4,11 @@ package com.sinvon.server.entity;
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
 
 @Data
+@TableName("user")
 public class User {
 
     /**
