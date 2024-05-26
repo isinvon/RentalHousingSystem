@@ -43,12 +43,16 @@ spring:
 #    sms-template-code: SMS_154950909
 #    sms-sign-name: 阿里云短信测试
 
-#开启日志
+# mybatis-plus开启日志
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # 实体类的主键生成策略都是采用ASSIGN_ID(默认雪花算法id)
+      id-type: ASSIGN_ID
 
 # log4j日志配置
 logging:
