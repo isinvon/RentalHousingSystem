@@ -14,4 +14,11 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
+    @Resource
+    private UserService userService;
+
+    @GetMapping("/list")
+    public List<User> list() {
+        return userService.list();
+    }
 }
