@@ -44,6 +44,11 @@ public class User {
     private String email;
 
     /**
+     * 性别
+     */
+    private String sex;
+
+    /**
      * 角色
      * 1：房东(普通用户)
      * 2：租客(普通用户)
