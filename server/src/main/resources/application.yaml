@@ -3,6 +3,8 @@ server:
   port: 8080
 
 spring:
+  application:
+    name: RentHouse
   #  mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
