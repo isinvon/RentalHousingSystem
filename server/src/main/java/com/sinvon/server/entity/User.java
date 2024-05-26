@@ -1,10 +1,7 @@
 package com.sinvon.server.entity;
 
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -16,8 +13,9 @@ public class User {
 
     /**
      * 主键 user_id
+     * type = IdType.ASSIGN_ID 设置id自动生成类型为雪花算法
      */
-    @TableId(value = "user_id", type = IdType.AUTO) // 主键自增雪花id
+    @TableId(value = "user_id", type = IdType.ASSIGN_ID) // 主键自增雪花id
     private Long userId;
 
     /**
