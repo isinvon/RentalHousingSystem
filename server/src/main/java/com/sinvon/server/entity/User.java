@@ -2,6 +2,7 @@ package com.sinvon.server.entity;
 
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -16,6 +17,7 @@ public class User {
     /**
      * 主键 user_id
      */
+    @TableId(value = "user_id", type = IdType.AUTO) // 主键自增雪花id
     private Long userId;
 
     /**
