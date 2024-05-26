@@ -34,6 +34,8 @@ public class UserGenerator {
         String UUIDRandom = UUID.randomUUID().toString().replace("-", "");
         // 雪花算法生成ID
         long id = IdUtil.getSnowflakeNextId();
+        // 创建一个性别数组
+        String[] sex = {"男", "女"};
 
 
         // 设置id
@@ -50,6 +52,8 @@ public class UserGenerator {
         user.setPhone(randomUserInfo.getTel());
         // 设置积分
         user.setScore(RandomUtil.randomInt(300,500)); // 随机积分 nextInt(100)代表0-99的随机数
+       // 设置性别
+        user.setSex(RandomUtil.randomEle(sex));
         // 设置角色
         user.setRole(UserState.TENANT.getCode());
         // 设置激活状态
