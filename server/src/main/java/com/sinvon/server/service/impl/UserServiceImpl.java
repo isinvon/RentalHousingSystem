@@ -67,6 +67,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
 
     /**
+     * 根据手机号查询用户
+     *
+     * @param phone
+     * @return User
+     */
+    @Override
+    public User getUserByPhone(String phone) {
+        return getOne(new LambdaQueryWrapper<User>().eq(User::getPhone, phone));
+    }
+
+    /**
      * 根据手机号或邮箱查询用户
      *
      * @param phone
