@@ -1,6 +1,7 @@
 package com.sinvon.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sinvon.server.common.R;
 import com.sinvon.server.entity.User;
 
 /**
@@ -33,6 +34,13 @@ public interface UserService extends IService<User> {
     public User getUserById(Long id);
 
 
+
+    /**
+     * 根据phone获取单个用户信息
+     * @param phone
+     * @return
+     */
+    public User getUserByPhone(String phone);
 
     /**
      * 根据phone或者email获取单个用户信息
