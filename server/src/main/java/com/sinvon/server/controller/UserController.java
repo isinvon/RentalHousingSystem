@@ -31,6 +31,11 @@ public class UserController {
     }
 
 
+    /**
+     * 注册
+     * @param user
+     * @return
+     */
     @PostMapping("/register")
     public R<String> register(@RequestBody User user) {
         // user为空则不创建
