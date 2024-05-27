@@ -64,4 +64,24 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public User forgetPassword(User user) {
         return null;
     }
+
+    /**
+     * 保存用户, 并且处理异常
+     *
+     * @param user
+     * @return boolean
+     */
+    @Override
+    public boolean saveUser(User user) {
+        try {
+            // 实际的保存逻辑，例如使用JPA、MyBatis或其他持久化框架
+            this.save(user);
+            return true;
+        } catch (Exception e) {
+            log.error("Error saving user", e);
+            return false;
+        }
+    }
+
+
 }
