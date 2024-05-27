@@ -65,6 +65,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return null;
     }
 
+    /**
+     * 根据id查询用户
+     *
+     * @param id
+     * @return User
+     */
+    @Override
+    public User getUserById(Long id) {
+        return getOne(new LambdaQueryWrapper<User>().eq(User::getUserId, id));
+    }
 
     /**
      * 根据用户名查询用户
