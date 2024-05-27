@@ -34,6 +34,12 @@ public interface UserService extends IService<User> {
     public User getUserById(Long id);
 
 
+    /**
+     * 根据username获取单个用户信息
+     * @param name
+     * @return
+     */
+    public User getUserByName(String name);
 
     /**
      * 根据email获取单个用户信息
