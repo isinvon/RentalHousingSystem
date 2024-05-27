@@ -18,7 +18,7 @@ public interface UserService extends IService<User> {
     /**
      * 注册
      */
-    public User register(User user);
+    public R<String> register(User user);
 
     /**
      * 忘记密码
