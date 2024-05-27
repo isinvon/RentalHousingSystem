@@ -35,6 +35,14 @@ public interface UserService extends IService<User> {
 
 
     /**
+     * 根据phone或者email获取单个用户信息
+     * @param phone
+     * @param email
+     * @return
+     */
+    public User getUserByPhoneOrEmail(String phone, String email);
+
+    /**
      * 保存用户, 并处理异常
      * @param user
      * @return
