@@ -25,5 +25,12 @@ public interface UserService extends IService<User> {
      */
     public User forgetPassword(User user);
 
+    /**
+     * 根据id获取单个用户信息
+     * @param id
+     * @return
+     */
+    public User getUserById(Long id);
+
 
 }
