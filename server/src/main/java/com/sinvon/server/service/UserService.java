@@ -33,4 +33,13 @@ public interface UserService extends IService<User> {
     public User getUserById(Long id);
 
 
+
+    /**
+     * 保存用户, 并处理异常
+     * @param user
+     * @return
+     */
+    public boolean saveUser(User user);
+
+
 }
