@@ -34,6 +34,11 @@ public class User {
     private String password;
 
     /**
+     * 密码盐
+     */
+    private String salt;
+
+    /**
      * 手机号
      */
     private String phone;
