@@ -65,6 +65,24 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return null;
     }
 
+
+    /**
+     * 根据手机号或邮箱查询用户
+     *
+     * @param phone
+     * @param email
+     * @return User
+     */
+    @Override
+    public User getUserByPhoneOrEmail(String phone, String email) {
+        // 查询逻辑，先按手机号查询，如果没有结果再按邮箱查询
+        User dbUserByPhone = this.getUserByPhone(phone);
+        if (dbUserByPhone != null) {
+            return dbUserByPhone;
+        }
+        return this.getUserByEmail(email);
+    }
+
     /**
      * 保存用户, 并且处理异常
      *
