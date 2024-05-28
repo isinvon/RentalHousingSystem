@@ -62,4 +62,4 @@ logging:
   config: classpath:logback-spring.xml
   level:
     # mybatis-plus日志, 只在debug模式下打印sql, 否则不打印(生产环境不打印)
-    com.baomidou.mybatisplus.core: debug
+    com.baomidou.mybatisplus: debug
