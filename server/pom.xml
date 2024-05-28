@@ -15,6 +15,12 @@
         <spring-boot.version>2.6.13</spring-boot.version>
     </properties>
     <dependencies>
+        <!-- 邮件工具类-->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
         <!--hutool工具类-->
         <dependency>
             <groupId>cn.hutool</groupId>
