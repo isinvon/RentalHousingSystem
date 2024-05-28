@@ -84,25 +84,25 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.2</version>
+            <version>3.5.5</version>
         </dependency>
         <!--mybatis-plus-core-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-core</artifactId>
-            <version>3.5.1</version>
+            <version>3.5.5</version>
         </dependency>
         <!--mybatis-plus-annotation-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-annotation</artifactId>
-            <version>3.5.1</version>
+            <version>3.5.5</version>
         </dependency>
         <!--mybatis-plus代码生成器-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.5.1</version>
+            <version>3.5.5</version>
         </dependency>
         <!--redis client-->
         <dependency>
