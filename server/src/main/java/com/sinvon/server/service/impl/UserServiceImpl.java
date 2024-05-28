@@ -50,6 +50,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             user.setSalt(salt);
             // 注入盐+密码拼接且SHA2加密后的密码
             user.setPassword(sha256Utils.saltEncrypt(salt, password));
+            // 设置角色为普通用户
+            user.setRole(2);
             // 激活账号
             user.setIsActive(1);
             // 设置基本积分
