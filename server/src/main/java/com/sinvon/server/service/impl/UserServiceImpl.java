@@ -10,11 +10,13 @@ import com.sinvon.server.mapper.UserMapper;
 import com.sinvon.server.service.UserService;
 import com.sinvon.server.utils.SHA256Utils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 用户实现层
  */
 @Service
+@Transactional
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Override
