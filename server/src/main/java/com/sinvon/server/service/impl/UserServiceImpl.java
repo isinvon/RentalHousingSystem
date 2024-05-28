@@ -47,6 +47,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             user.setSalt(salt);
             // 注入盐+密码拼接且SHA2加密后的密码
             user.setPassword(sha256Utils.saltEncrypt(salt, password));
+            // 设置基本积分
+            user.setScore(100);
             // 保存用户到数据库
             boolean isSaved = this.saveUser(user);
             if (isSaved) {
