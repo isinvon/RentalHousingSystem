@@ -9,17 +9,25 @@ import lombok.Getter;
  */
 @Getter
 public enum UserState {
-    // 账号是否已经激活
-    ACTIVE(1, "激活"),
-    NOT_ACTIVE(0, "未激活"),
+
 
     // 用户角色
+    // 管理员
+    ADMIN(1, "管理员"),
+    // 普通用户,
+    USER(2, "普通用户"),
+
     // 房东
     LANDLORD(1, "房东"),
     // 租客
     TENANT(2, "租客"),
-    // 管理员
-    ADMIN(3, "管理员"),
+
+
+    // 账号状态
+    // 账号是否已经激活
+    ACTIVE(1, "激活"),
+    NOT_ACTIVE(0, "未激活"),
+
 
     // 是否VIP
     VIP(1, "VIP"),

@@ -55,9 +55,8 @@ public class User {
 
     /**
      * 角色
-     * 1：房东(普通用户)
-     * 2：租客(普通用户)
-     * 3：管理员
+     * 1：管理员
+     * 2：普通用户
      */
     private Integer role;
 
