@@ -27,7 +27,7 @@ public class RandomUserInfo {
      * 返回随机英文用户名
      * @return
      */
-    public String getRandomUserName() {
+    public static String getRandomUserName() {
         StringBuffer sb = new StringBuffer();
         int length = getNum(3, 10);
         for (int i = 0; i < length; i++) {
@@ -46,7 +46,7 @@ public class RandomUserInfo {
      * @param lMax 最大长度
      * @return
      */
-    public String getEmail(int lMin, int lMax) {
+    public static String getEmail(int lMin, int lMax) {
         int length = getNum(lMin, lMax);
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < length; i++) {
@@ -62,7 +62,7 @@ public class RandomUserInfo {
      */
     private static final String[] telFirst = "134,135,136,137,138,139,150,151,152,157,158,159,130,131,132,155,156,133,153".split(",");
 
-    public String getTel() {
+    public static String getTel() {
         int index = getNum(0, telFirst.length - 1);
         String first = telFirst[index];
         String second = String.valueOf(getNum(1, 888) + 10000).substring(1);
@@ -75,7 +75,7 @@ public class RandomUserInfo {
      */
     private static String name_sex = "";
 
-    public String getChineseName() {
+    public static String getChineseName() {
         int index = getNum(0, firstName.length() - 1);
         String first = firstName.substring(index, index + 1);
         int sex = getNum(0, 1);
@@ -104,7 +104,7 @@ public class RandomUserInfo {
      *
      * @return
      */
-    public String getRoad() {
+    public static String getRoad() {
         int index = getNum(0, road.length - 1);
         String first = road[index];
         String second = String.valueOf(getNum(11, 150)) + "号";

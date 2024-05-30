@@ -26,7 +26,7 @@ import java.util.UUID;
 public class UserGenerator {
 
 
-    public User generateUser() {
+    public static User generateUser() {
         User user = new User();
         Random random = new Random();
         RandomUserInfo randomUserInfo = new RandomUserInfo();

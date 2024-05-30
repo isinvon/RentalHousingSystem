@@ -16,7 +16,7 @@ public class MD5Utils {
      * @param password
      * @return
      */
-    public String encrypt(String password) {
+    public static String encrypt(String password) {
         return SecureUtil.md5(password);
     }
 
@@ -27,7 +27,7 @@ public class MD5Utils {
      * @param password
      * @return String
      */
-    public String saltEncrypt(String salt, String password) {
+    public static String saltEncrypt(String salt, String password) {
         // 拼接密码和盐
         String combinedPassword = password + salt;
         // 返回md5加密后的密码
@@ -41,7 +41,7 @@ public class MD5Utils {
      * @param length
      * @return String
      */
-    public String generateSalt(int length) {
+    public static String generateSalt(int length) {
         return RandomUtil.randomString(length);
     }
 

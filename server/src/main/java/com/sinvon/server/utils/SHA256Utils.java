@@ -15,7 +15,7 @@ public class SHA256Utils {
      * @param password
      * @return
      */
-    public String encrypt(String password) {
+    public static String encrypt(String password) {
         return SecureUtil.sha256(password);
     }
 
@@ -27,7 +27,7 @@ public class SHA256Utils {
      * @param password
      * @return String
      */
-    public String saltEncrypt(String salt, String password) {
+    public static String saltEncrypt(String salt, String password) {
         // 拼接密码和盐
         String combinedPassword = password + salt;
         // 返回sha256加密
@@ -41,7 +41,7 @@ public class SHA256Utils {
      * @param length
      * @return String
      */
-    public String generateSalt(int length) {
+    public static String generateSalt(int length) {
         return RandomUtil.randomString(length);
     }
 }
