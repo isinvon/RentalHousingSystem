@@ -107,7 +107,7 @@ public class RandomUserInfo {
     public static String getRoad() {
         int index = getNum(0, road.length - 1);
         String first = road[index];
-        String second = String.valueOf(getNum(11, 150)) + "号";
+        String second = getNum(11, 150) + "号";
         String third = "-" + getNum(1, 20) + "-" + getNum(1, 10);
         return first + second + third;
     }
