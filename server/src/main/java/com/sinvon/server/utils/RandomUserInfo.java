@@ -48,7 +48,7 @@ public class RandomUserInfo {
      */
     public static String getEmail(int lMin, int lMax) {
         int length = getNum(lMin, lMax);
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
             int number = (int) (Math.random() * base.length());
             sb.append(base.charAt(number));
