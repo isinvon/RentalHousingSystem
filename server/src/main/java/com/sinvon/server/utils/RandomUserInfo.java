@@ -117,7 +117,7 @@ public class RandomUserInfo {
      *
      * @return
      */
-    public Map getAllInfo() {
+    public static Map getAllInfo() {
         Map map = new HashMap();
         map.put("name", getChineseName());
         map.put("username", getRandomUserName());
