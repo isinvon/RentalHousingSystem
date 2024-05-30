@@ -44,12 +44,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (dbUser == null) {
             // 创建账户
             // 生成随机盐(随机长度的密码)
-            SHA256Utils sha256Utils = new SHA256Utils();
-            String salt = sha256Utils.generateSalt(RandomUtil.randomInt(150, 200));
+            String salt = SHA256Utils.generateSalt(RandomUtil.randomInt(150, 200));
             // 注入盐
             user.setSalt(salt);
             // 注入盐+密码拼接且SHA2加密后的密码
-            user.setPassword(sha256Utils.saltEncrypt(salt, password));
+            user.setPassword(SHA256Utils.saltEncrypt(salt, password));
             // 设置角色为普通用户
             user.setRole(2);
             // 激活账号

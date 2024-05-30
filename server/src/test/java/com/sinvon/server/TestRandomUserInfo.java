@@ -14,12 +14,12 @@ public class TestRandomUserInfo {
     public void randomUserInfoTest()
     {
         RandomUserInfo randomUserInfo = new RandomUserInfo();
-        System.out.println("随机名字: " + randomUserInfo.getChineseName());
-        System.out.println("随机英文名字: "+randomUserInfo.getRandomUserName());
-        System.out.println("随机手机号: " + randomUserInfo.getTel());
-        System.out.println("随机邮箱: " + randomUserInfo.getEmail(5,11));
-        System.out.println("随机地址: " + randomUserInfo.getRoad());
-        System.out.println("随机用户全部信息: " + randomUserInfo.getAllInfo());
+        System.out.println("随机名字: " + RandomUserInfo.getChineseName());
+        System.out.println("随机英文名字: "+ RandomUserInfo.getRandomUserName());
+        System.out.println("随机手机号: " + RandomUserInfo.getTel());
+        System.out.println("随机邮箱: " + RandomUserInfo.getEmail(5,11));
+        System.out.println("随机地址: " + RandomUserInfo.getRoad());
+        System.out.println("随机用户全部信息: " + RandomUserInfo.getAllInfo());
         // 输出结果
         // 随机名字: 贲静
         // 随机英文名字: 2ipmkcn3

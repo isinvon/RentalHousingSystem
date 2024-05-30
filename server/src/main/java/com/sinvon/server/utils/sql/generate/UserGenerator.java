@@ -28,8 +28,6 @@ public class UserGenerator {
 
     public static User generateUser() {
         User user = new User();
-        Random random = new Random();
-        RandomUserInfo randomUserInfo = new RandomUserInfo();
         // UUID生成id
         String UUIDRandom = UUID.randomUUID().toString().replace("-", "");
         // 雪花算法生成ID
@@ -41,15 +39,15 @@ public class UserGenerator {
         // 设置id
         user.setUserId(id);
         // 设置用户名
-        user.setUsername(randomUserInfo.getRandomUserName());
+        user.setUsername(RandomUserInfo.getRandomUserName());
         //设置姓名
-        user.setFullname(randomUserInfo.getChineseName());
+        user.setFullname(RandomUserInfo.getChineseName());
         // 设置密码
         user.setPassword("123456");
         // 设置邮箱
-        user.setEmail(randomUserInfo.getEmail(6,11));
+        user.setEmail(RandomUserInfo.getEmail(6,11));
         // 设置手机号
-        user.setPhone(randomUserInfo.getTel());
+        user.setPhone(RandomUserInfo.getTel());
         // 设置积分
         user.setScore(RandomUtil.randomInt(300,500)); // 随机积分 nextInt(100)代表0-99的随机数
        // 设置性别

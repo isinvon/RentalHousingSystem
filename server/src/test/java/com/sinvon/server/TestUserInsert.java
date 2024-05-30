@@ -30,9 +30,8 @@ public class TestUserInsert {
      */
     @Test
     public void UserInsert() {
-        UserGenerator userGenerator = new UserGenerator();
         // 生成填充好信息的user对象
-        User user = userGenerator.generateUser();
+        User user = UserGenerator.generateUser();
         System.out.println(user);
         // 插入数据库中
         boolean save = userService.save(user);

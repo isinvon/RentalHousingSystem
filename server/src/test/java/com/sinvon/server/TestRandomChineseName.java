@@ -15,10 +15,9 @@ public class TestRandomChineseName {
      */
     @Test
     public void randomChineseNameTest() {
-        RandomChineseName randomChineseName = new RandomChineseName();
-        System.out.println(randomChineseName.getRandomChineseName());
-        System.out.println(randomChineseName.getRandomChineseName());
-        System.out.println(randomChineseName.getRandomChineseName());
+        System.out.println(RandomChineseName.getRandomChineseName());
+        System.out.println(RandomChineseName.getRandomChineseName());
+        System.out.println(RandomChineseName.getRandomChineseName());
         // 输出结果:
         // 倪肐
         // 陶榌

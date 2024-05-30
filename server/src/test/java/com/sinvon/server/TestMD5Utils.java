@@ -22,8 +22,7 @@ public class TestMD5Utils {
      */
     @Test
     public void testMD5encrypt() {
-        MD5Utils md5Utils = new MD5Utils();
-        String md5 = md5Utils.encrypt(password);
+        String md5 = MD5Utils.encrypt(password);
         System.out.println("md5加密之后的密码: " + md5);
     }
 
