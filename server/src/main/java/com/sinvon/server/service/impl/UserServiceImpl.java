@@ -5,8 +5,11 @@ import cn.hutool.core.util.RandomUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sinvon.server.common.R;
+import com.sinvon.server.entity.LoginLog;
 import com.sinvon.server.entity.User;
+import com.sinvon.server.enums.LoginState;
 import com.sinvon.server.mapper.UserMapper;
+import com.sinvon.server.service.LoginLogService;
 import com.sinvon.server.service.UserService;
 import com.sinvon.server.utils.DeviceUtils;
 import com.sinvon.server.utils.SHA256Utils;
@@ -27,9 +30,11 @@ import java.util.Map;
 @Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
+    @Resource
+    private LoginLogService loginLogService;
+
+
     @Override
-    public User login(User user) {
-        return null;
     public R<String> login(HttpServletRequest httpRequest, HttpServletResponse httpResponse, User user) {
 
         // 账号密码方式登录:
@@ -57,6 +62,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         // 将密码和从数据库中查询的密码比较, 查看是否一致
         if (encryptPassword.equals(dbUser.getPassword())) {
             // 如果正确
+            // 并且记录登录日志
+            LoginLog loginLog = new LoginLog();
+            loginLog.setUserId(dbUser.getUserId());
+            loginLog.setSessionId(httpRequest.getSession().getId().toString());
+            // loginLog.getLogoutTime()
+            loginLog.setIp(httpRequest.getRemoteAddr());
+            // 获取用户设备信息
+            String ua = DeviceUtils.getUA(httpRequest);
+            Map<String, Object> browserInfoMap = DeviceUtils.getDeviceInfo(ua);
+            loginLog.setBrowserInfo(browserInfoMap.toString());
+            // 设置用户登录成功
+            loginLog.setLoginStatus(LoginState.SUCCESS.getCode());
+            // 用户插入数据库login_log表中
+            loginLogService.save(loginLog);
+            log.info("用户id: {} 登录成功",dbUser.getUserId());
             // 返回登录成功
             return R.success("登录成功");
         }
