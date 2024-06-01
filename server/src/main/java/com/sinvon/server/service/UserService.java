@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.sinvon.server.common.R;
 import com.sinvon.server.entity.User;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 /**
  * 用户接口层
  */
@@ -14,7 +16,7 @@ public interface UserService extends IService<User> {
     /**
      * 登录
      */
-    public User login(User user);
+    public R<String> login(HttpServletRequest httpRequest, HttpServletResponse httpResponse, User user);
 
     /**
      * 注册

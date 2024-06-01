@@ -8,20 +8,60 @@ import com.sinvon.server.common.R;
 import com.sinvon.server.entity.User;
 import com.sinvon.server.mapper.UserMapper;
 import com.sinvon.server.service.UserService;
+import com.sinvon.server.utils.DeviceUtils;
 import com.sinvon.server.utils.SHA256Utils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 
 /**
  * 用户实现层
  */
 @Service
 @Transactional
+@Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Override
     public User login(User user) {
         return null;
+    public R<String> login(HttpServletRequest httpRequest, HttpServletResponse httpResponse, User user) {
+
+        // 账号密码方式登录:
+
+        // 获取手机号
+        String phone = user.getPhone();
+
+        // 获取邮箱
+        String email = user.getEmail();
+
+        // 获取密码
+        String password = user.getPassword();
+
+        // 通过手机号或者邮箱判断数据库中是否有这个用户,如果是手机号登录, 就通过手机号查询, 如果通过邮箱登录, 就通过邮箱查询
+        User dbUser = getUserByPhoneOrEmail(phone, email);
+        // 如果没有这个用户, 就返回R.error("用户不存在, 请注册账号")
+        if (dbUser == null) {
+            return R.error("用户不存在, 请注册账号");
+        }
+        // 如果有这个用户, 就判断密码是否正确
+        // 从数据库中查询此用户的盐值
+        String salt = dbUser.getSalt();
+        // 将密码与盐值进行SHA256加密
+        String encryptPassword = SHA256Utils.saltEncrypt(salt, password);
+        // 将密码和从数据库中查询的密码比较, 查看是否一致
+        if (encryptPassword.equals(dbUser.getPassword())) {
+            // 如果正确
+            // 返回登录成功
+            return R.success("登录成功");
+        }
+        // 密码不一致
+        return R.error("登录失败,密码错误");
     }
 
     @Override

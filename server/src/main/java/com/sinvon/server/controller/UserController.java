@@ -42,4 +42,9 @@ public class UserController {
         return userService.register(user);
     }
 
+    @PostMapping("/login")
+    public R<String> login(HttpServletRequest httpRequest, HttpServletResponse httpResponse, @RequestBody User user) {
+        return userService.login(httpRequest, httpResponse, user);
+    }
+
 }
